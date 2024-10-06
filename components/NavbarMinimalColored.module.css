@@ -1,0 +1,48 @@
+.navbar {
+  width: rem(100px);
+  min-height: 100vh;
+  padding-bottom: var(--mantine-spacing-md);
+  padding-top: var(--mantine-spacing-md);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mantine-color-navColor-1);
+}
+
+.navbarMain {
+  flex: 1;
+
+  margin-top: rem(20px);
+}
+
+.link {
+  width: 100%;
+  height: rem(65px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--mantine-color-navText-0) !important;
+  opacity: 0.5;
+
+  justify-content: center;
+
+  &:hover {
+    color: var(--mantine-color-white) !important;
+    opacity: 1;
+    transition: color 0.3s ease;
+  }
+
+  &[data-active] {
+    &,
+    &:hover {
+      box-shadow: var(--mantine-shadow-sm);
+      background-color: var(--mantine-color-mainBgColor-1);
+      color: var(--mantine-color-blue-6);
+      border-right: 4px solid var(--mantine-color-purpleColor-1);
+    }
+  }
+}
+.noUnderline {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits color from parent */
+}
